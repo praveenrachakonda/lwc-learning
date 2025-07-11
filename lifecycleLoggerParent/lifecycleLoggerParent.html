@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Lifecycle Logger - Parent">
+        <p>Parent Component Loaded</p>
+        <c-lifecycle-logger-child></c-lifecycle-logger-child>
+
+        <lightning-button label="Remove Child" onclick={toggleChild}></lightning-button>
+
+        <template if:true={showLogs}>
+            <p><strong>Check Console for Logs</strong></p>
+        </template>
+    </lightning-card>
+</template>
