@@ -31,4 +31,10 @@ export default class MagicBoxGame extends LightningElement {
         box.style.backgroundColor = 'lightblue';
         box.style.display = 'block'; 
     }
+    slider(event){
+        this.boxSize = event.detail.value;
+        const box = this.template.querySelector('.box');
+        box.style.width = `${this.boxSize}px`;
+        box.style.height = `${this.boxSize}px`;
+    }
 }
