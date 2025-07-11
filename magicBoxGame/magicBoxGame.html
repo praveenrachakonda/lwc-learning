@@ -6,5 +6,6 @@
         <lightning-button label="⬆️ Grow" onclick={growBox} class="s-button"></lightning-button>
         <lightning-button label="🫥 Hide" onclick={hideBox} class="s-button"></lightning-button>
         <lightning-button label="Reset" onclick={reset} class="s-button"></lightning-button>
+        <lightning-slider label="size" min="50" max="300" step="10" value={boxSize} onchange={slider}></lightning-slider>
     </lightning-card>
 </template>
