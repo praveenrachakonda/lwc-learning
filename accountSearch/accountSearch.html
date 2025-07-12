@@ -1,0 +1,9 @@
+<template>
+<lightning-input type="search" label="Search" value={searchKey} onchange={handleSearch}></lightning-input>
+<template if:true={accounts}>
+        <p>🔍 Showing {accounts.length} account(s):</p>
+        <template for:each={accounts} for:item="acc">
+            <p key={acc.Id}>{acc.Name}</p>
+        </template>
+    </template>
+</template>
