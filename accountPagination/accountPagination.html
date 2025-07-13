@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Account Pagination">
+        <!-- Data Table -->
+        <lightning-datatable key-field="Id" data={paginatedAccounts} columns={columns}></lightning-datatable>
+
+        <!-- Pagination Controls -->
+        <div class="slds-m-top_medium slds-align_absolute-center">
+            <lightning-button label="Previous" onclick={handlePrevious} disabled={isFirstPage}></lightning-button>
+
+            <p>Page {currentPage} of {totalPages}</p>
+
+            <lightning-button label="Next" onclick={handleNext} disabled={isLastPage}></lightning-button>
+        </div>
+    </lightning-card>
+</template>
