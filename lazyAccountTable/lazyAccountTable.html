@@ -1,0 +1,16 @@
+<template>
+    <lightning-datatable
+        data={records}
+        columns={columns}
+        key-field="Id"
+        is-loading={isLoading}
+        onloadmore={loadMoreAccounts}
+        enable-infinite-loading
+        load-more-offset="5">
+    </lightning-datatable>
+    <template if:true={allLoaded}>
+        <p style="text-align:center; padding:10px; color:grey;">
+            All records loaded.
+        </p>
+    </template>
+</template>
